@@ -10,7 +10,7 @@ class App extends Component {
             <div className="App">
                 <Switch location={ window.location }>
                     <Route exact path="/" component={ Player } />
-                    <Route path="/gallery" component={ List } />
+                    <Route path="/list" component={ List } />
                     <Route render={() => <h4>404 Not Found</h4>} />
                 </Switch>
             </div>

@@ -5,7 +5,7 @@ import SongsList from './SongsList';
 class List extends Component {
     render() {
         return (
-            <div>
+            <div className='list'>
                 <ListNav />
                 <SongsList />
             </div>

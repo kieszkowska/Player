@@ -1,0 +1,28 @@
+.list {
+    width: 360px;
+    height: 480px;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+
+.listNav {
+
+    .link {
+        position: relative;
+        left: 31px;
+        top: 33px;
+
+        img:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .listTitle {
+        width: 100%;
+        margin: 14px auto;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary;
+    }
+}
