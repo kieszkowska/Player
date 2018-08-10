@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import Player from './components/Player';
-import List from './components/List'
+import '../App.css';
+import Player from './player/Player';
+import List from './list/List'
 
 class App extends Component {
     render() {
