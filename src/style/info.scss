@@ -49,8 +49,13 @@
         justify-content: center;
 
         img {
-            margin: 24px 12px;
+            margin: 24px 8px;
             cursor: pointer;
+        }
+
+        .repeat, .shuffle, .loop {
+            border-radius: 50%;
+            padding: 4px;
         }
     }
 
