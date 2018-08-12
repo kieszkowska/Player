@@ -1,7 +1,13 @@
 .controls-container {
     height: 142px;
+    width: 360px;
+    position: absolute;
+    bottom: 0;
+    background-color: #f3f4f8;
+    border-radius: 0 0 30px 30px;
 
     .controls {
+        height: 135px;
         display: flex;
         justify-content: space-around;
         align-items: center;

@@ -6,7 +6,7 @@ class VolumeSlider extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            volume: 50
+            volume: 75
         }
     }
 
