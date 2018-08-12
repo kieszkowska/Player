@@ -5,7 +5,7 @@ class TitleBar extends Component {
         return (
             <div className='titleBar'>
                 <div>
-                    <span className='author'>Icona Pop</span>
+                    <span className='artist'>Icona Pop</span>
                     <br />
                     <span className='title'>Still Don't Know</span>
                 </div>

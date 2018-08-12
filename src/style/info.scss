@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
 
-    .author {
+    .artist {
         font-size: 18px;
         line-height: 24px;
         font-weight: bold;
@@ -51,18 +51,17 @@
         img {
             margin: 24px 12px;
             cursor: pointer;
-
-            &:hover {
-                opacity: 0.8;
-            }
         }
     }
 
     .hamburger {
-        opacity: 0.3;
         position: absolute;
         right: 0;
         margin: 26px 20px;
         z-index: 10;
+
+        img {
+            opacity: 0.3;
+        }
     }
 }

@@ -10,9 +10,9 @@ class NavBar extends Component {
         return (
             <div className='navbar'>
                 <div className='controls'>
-                    <img src={ loop } alt='Play playlist in loop' />
-                    <img src={ shuffle } alt='Shuffle' />
-                    <img src={ repeat } alt='Repeat' />
+                    <img className='loop' src={ loop } alt='Play playlist in loop' />
+                    <img className='shuffle' src={ shuffle } alt='Shuffle' />
+                    <img className='repeat' src={ repeat } alt='Repeat' />
                 </div>
                 <div className='hamburger'>
                     <Link to={ '/playlist' }>
