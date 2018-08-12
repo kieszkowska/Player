@@ -1,0 +1,24 @@
+.controls-container {
+    height: 142px;
+
+    .controls {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .music {
+            display: flex;
+            align-items: center;
+
+            .btn {
+                margin: 0 9px;
+            }
+
+            .btn-lg {
+                margin: 0;
+                border: 7px solid white;
+            }
+        }
+    }
+}
+

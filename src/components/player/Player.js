@@ -5,7 +5,7 @@ import Controls from './Controls';
 class Player extends Component {
     render() {
         return (
-            <div>
+            <div className='player'>
                 <Info />
                 <Controls />
             </div>

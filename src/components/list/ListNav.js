@@ -7,7 +7,7 @@ class ListNav extends Component {
         return (
             <div>
                 <div className='listNav'>
-                    <div className='link'>
+                    <div className='btn'>
                         <Link to={ '/' }>
                             <img src={ arrow } alt='Return to player' />
                         </Link>

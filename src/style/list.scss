@@ -1,25 +1,29 @@
 .list {
     width: 360px;
     height: 480px;
-    background-color: #ffffff;
+    background-color: #f3f4f8;
     border-radius: 30px;
 }
 
 .listNav {
 
-    .link {
+    .btn {
         position: relative;
-        left: 31px;
-        top: 33px;
+        z-index: 2;
+        left: 21px;
+        top: 20px;
 
-        img:hover {
-            opacity: 0.8;
+        img {
+            margin-top: 2px;
         }
     }
 
     .listTitle {
+        position: relative;
+        z-index: 1;
+        top: -7px;
         width: 100%;
-        margin: 14px auto;
+        margin: 0 auto;
         text-align: center;
         font-size: 18px;
         font-weight: bold;
