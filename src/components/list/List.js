@@ -7,7 +7,7 @@ class List extends Component {
         return (
             <div className='list'>
                 <ListNav />
-                <SongsList />
+                <SongsList songs={ this.props.songs } />
             </div>
         );
     }

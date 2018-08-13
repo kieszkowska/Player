@@ -1,0 +1,48 @@
+.songsList {
+    height: 390px;
+    width: 280px;
+    padding-right: 25px;
+    padding-left: 10px;
+    margin: 10px auto;
+    overflow: auto;
+
+    .listElement {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+        border-bottom: 1px solid #d3d5de;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            margin: 6px;
+        }
+
+        .secondaryText {
+            color: $secondary-text;
+            font-size: 12px;
+        }
+
+        .title {
+            color: $primary-dark;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width:  7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dfdfe7;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
