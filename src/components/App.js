@@ -104,7 +104,7 @@ class App extends Component {
     previousSong() {
         let i = this.state.currentSong.id - 1;
         if (i < 0) {
-            i = songs.length;
+            i = songs.length - 1;
         }
         this.setState({
             currentSong: {
@@ -121,10 +121,16 @@ class App extends Component {
             <div className="App">
                 <Switch location={ window.location }>
                     <Route exact path="/" render={() => (
-                        <Player song={ this.state.currentSong } />
+                        <Player song={ this.state.currentSong }
+                                nextSongHandler={ this.nextSong }
+                                previousSongHandler={ this.previousSong }
+                        />
                     )}  />
                     <Route exact path="/playlist" render={() => (
-                        <List songs={ songs } currentSong={ this.state.currentSong } songHandler={ this.changeSong } />
+                        <List songs={ songs }
+                              currentSong={ this.state.currentSong }
+                              songHandler={ this.changeSong }
+                        />
                     )} />
                     <Route render={() => <h4>404 Not Found</h4>} />
                 </Switch>

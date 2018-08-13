@@ -22,7 +22,11 @@ class Player extends Component {
         return (
             <div className='player'>
                 <Info song={ this.props.song } />
-                <Controls play={ this.state.play } playHandler={ this.changePlayState } />
+                <Controls play={ this.state.play }
+                          playHandler={ this.changePlayState }
+                          nextSongHandler={ this.props.nextSongHandler }
+                          previousSongHandler={ this.props.previousSongHandler }
+                />
             </div>
         );
     }

@@ -20,13 +20,13 @@ class Controls extends Component {
                         <img src={ share } alt="Share" />
                     </div>
                     <div className='music'>
-                        <div className='btn primary'>
+                        <div className='btn primary' onClick={ () => this.props.previousSongHandler() }>
                             <img src={ previous } alt="Previous" />
                         </div>
                         <div className='btn btn-lg primary play' onClick={ () => this.props.playHandler() }>
                             <img src={ this.props.play ? pause : play } alt="Play/pause" />
                         </div>
-                        <div className='btn primary'>
+                        <div className='btn primary' onClick={ () => this.props.nextSongHandler() }>
                             <img src={ next } alt="Next" />
                         </div>
                     </div>
