@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import '../App.css';
 import Player from './player/Player';
 import List from './list/List'
@@ -117,23 +118,32 @@ class App extends Component {
     }
 
     render() {
+        const currentKey = window.location.pathname.split('/')[1] || '/';
+        const timeout = { enter: 500, exit: 0 };
+
         return (
             <div className="App">
-                <Switch location={ window.location }>
-                    <Route exact path="/" render={() => (
-                        <Player song={ this.state.currentSong }
-                                nextSongHandler={ this.nextSong }
-                                previousSongHandler={ this.previousSong }
-                        />
-                    )}  />
-                    <Route exact path="/playlist" render={() => (
-                        <List songs={ songs }
-                              currentSong={ this.state.currentSong }
-                              songHandler={ this.changeSong }
-                        />
-                    )} />
-                    <Route render={() => <h4>404 Not Found</h4>} />
-                </Switch>
+                <TransitionGroup component="main" className="page-main">
+                    <CSSTransition key={ currentKey } timeout={ timeout } classNames="fade" appear>
+                        <div className="page-main-inner">
+                            <Switch location={ window.location }>
+                                <Route exact path="/" render={() => (
+                                    <Player song={ this.state.currentSong }
+                                            nextSongHandler={ this.nextSong }
+                                            previousSongHandler={ this.previousSong }
+                                    />
+                                )}  />
+                                <Route exact path="/playlist" render={() => (
+                                    <List songs={ songs }
+                                          currentSong={ this.state.currentSong }
+                                          songHandler={ this.changeSong }
+                                    />
+                                )} />
+                                <Route render={() => <h4>404 Not Found</h4>} />
+                            </Switch>
+                        </div>
+                    </CSSTransition>
+                </TransitionGroup>
             </div>
         );
     }
