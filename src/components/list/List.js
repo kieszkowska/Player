@@ -7,7 +7,7 @@ class List extends Component {
         return (
             <div className='list'>
                 <ListNav />
-                <SongsList songs={ this.props.songs } />
+                <SongsList songs={ this.props.songs } songHandler={ this.props.songHandler } />
             </div>
         );
     }

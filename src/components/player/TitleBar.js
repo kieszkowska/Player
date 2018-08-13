@@ -5,9 +5,9 @@ class TitleBar extends Component {
         return (
             <div className='titleBar'>
                 <div>
-                    <span className='artist'>Icona Pop</span>
+                    <span className='artist'>{ this.props.song.artist }</span>
                     <br />
-                    <span className='title'>Still Don't Know</span>
+                    <span className='title'>{ this.props.song.title }</span>
                 </div>
             </div>
         );

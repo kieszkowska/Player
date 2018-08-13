@@ -6,7 +6,7 @@ class Player extends Component {
     render() {
         return (
             <div className='player'>
-                <Info />
+                <Info song={ this.props.song } />
                 <Controls />
             </div>
         );

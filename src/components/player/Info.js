@@ -11,7 +11,7 @@ class Info extends Component {
                 <div className='image' style={{ backgroundImage: `url(${background})` }}>
                     <div className='overlay'>{ null }</div>
                 </div>
-                <TitleBar />
+                <TitleBar song={ this.props.song } />
             </div>
         );
     }

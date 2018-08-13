@@ -59,14 +59,73 @@ let songs = [
 ];
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentSong: {
+                id: 0,
+                artist: songs[0].artist,
+                title: songs[0].title,
+                time: songs[0].time
+            }
+        };
+
+        this.changeSong = this.changeSong.bind(this);
+        this.nextSong = this.nextSong.bind(this);
+        this.previousSong = this.previousSong.bind(this);
+    }
+
+    changeSong(i) {
+        this.setState({
+            currentSong: {
+                id: i,
+                artist: songs[i].artist,
+                title: songs[i].title,
+                time: songs[i].time
+            }
+        });
+    }
+
+    nextSong() {
+        let i = this.state.currentSong.id + 1;
+        if (i >= songs.length) {
+            i = 0;
+        }
+        this.setState({
+            currentSong: {
+                id: i,
+                artist: songs[i].artist,
+                title: songs[i].title,
+                time: songs[i].time
+            }
+        });
+    }
+
+    previousSong() {
+        let i = this.state.currentSong.id - 1;
+        if (i < 0) {
+            i = songs.length;
+        }
+        this.setState({
+            currentSong: {
+                id: i,
+                artist: songs[i].artist,
+                title: songs[i].title,
+                time: songs[i].time
+            }
+        });
+    }
+
     render() {
         return (
             <div className="App">
                 <Switch location={ window.location }>
-                    <Route exact path="/" component={ Player } />
+                    <Route exact path="/" render={() => (
+                        <Player song={ this.state.currentSong } />
+                    )}  />
                     <Route exact path="/playlist" render={() => (
-                        <List songs={ songs } />
-                    )}/>
+                        <List songs={ songs } currentSong={ this.state.currentSong } songHandler={ this.changeSong } />
+                    )} />
                     <Route render={() => <h4>404 Not Found</h4>} />
                 </Switch>
             </div>
