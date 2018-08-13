@@ -23,8 +23,8 @@ class Controls extends Component {
                         <div className='btn primary'>
                             <img src={ previous } alt="Previous" />
                         </div>
-                        <div className='btn btn-lg primary play'>
-                            <img src={ pause } alt="Play/pause" data-src={ play } />
+                        <div className='btn btn-lg primary play' onClick={ () => this.props.playHandler() }>
+                            <img src={ this.props.play ? pause : play } alt="Play/pause" />
                         </div>
                         <div className='btn primary'>
                             <img src={ next } alt="Next" />
