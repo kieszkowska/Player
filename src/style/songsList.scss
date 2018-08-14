@@ -4,7 +4,8 @@
     padding-right: 25px;
     padding-left: 10px;
     margin: 10px auto;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .listElement {
         display: flex;
@@ -18,6 +19,7 @@
 
         &:last-child {
             border-bottom: none;
+            margin-bottom: 30px;
         }
 
         img {
@@ -48,4 +50,19 @@
 
 ::-webkit-scrollbar-track {
     background: transparent;
+}
+
+.songsContainer {
+    height: calc(450px - 54px);
+}
+
+.shadow {
+    position: relative;
+    bottom: 60px;
+    height: 50px;
+    width: 360px;
+
+    background: -moz-linear-gradient(bottom,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
