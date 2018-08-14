@@ -30,8 +30,10 @@ class Controls extends Component {
                             <img src={ next } alt="Next" />
                         </div>
                     </div>
-                    <div className='btn'>
-                        <img src={ favorite } alt="Favorite" />
+                    <div className={ this.props.song.favorite ? 'btn active' : 'btn' }>
+                        <img src={ favorite } alt="Favorite"
+                             onClick={ () => this.props.favoriteHandler(this.props.song.id) }
+                        />
                     </div>
                 </div>
             </div>

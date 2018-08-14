@@ -19,7 +19,11 @@ class SongsList extends Component {
                                 </Link>
                                 <div key={ i * 100 } >
                                     <img className='btn-transparent' src={ share } alt='Share' />
-                                    <img className='btn-transparent' src={ favorite } alt='Add to favorite' />
+                                    <img className={ el.favorite ? 'btn-transparent active' : 'btn-transparent' }
+                                         src={ favorite }
+                                         alt='Add to favorite'
+                                         onClick={ () => this.props.favoriteHandler(i) }
+                                    />
                                 </div>
                             </div>
                         );

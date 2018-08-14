@@ -7,7 +7,7 @@ class Player extends Component {
         super(props);
         this.state = {
             play: true
-        }
+        };
 
         this.changePlayState = this.changePlayState.bind(this);
     }
@@ -23,9 +23,11 @@ class Player extends Component {
             <div className='player'>
                 <Info song={ this.props.song } />
                 <Controls play={ this.state.play }
+                          song={ this.props.song }
                           playHandler={ this.changePlayState }
                           nextSongHandler={ this.props.nextSongHandler }
                           previousSongHandler={ this.props.previousSongHandler }
+                          favoriteHandler={ this.props.favoriteHandler }
                 />
             </div>
         );
