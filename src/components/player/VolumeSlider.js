@@ -12,7 +12,8 @@ class VolumeSlider extends Component {
 
     componentDidMount() {
         let src = { audio };
-        document.getElementsByClassName("rangeslider__handle")[0].setAttribute('style', 'background-image: url("' + src.audio + '") !important');
+        document.getElementsByClassName("rangeslider__handle")[0]
+                .setAttribute('style', 'background-image: url("' + src.audio + '") !important');
     }
 
     handleOnChange = (value) => {
