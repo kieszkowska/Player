@@ -4,7 +4,7 @@ Music player UI created with react \
 
 ## Installation
 
-###### To start development server run:
+##### To start development server run:
 `npm run start` \
 Script will watch for changes and app will be available on `http://localhost:3000/`.
 
